@@ -61,13 +61,32 @@ li a.active {
 /*second grid container*/
 .grid2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(400px, auto);
+  grid-template-areas:
+    "text1 video1 video1"
+    "text3 text3 text3";
 }
-
+/*CSS for all boxes*/
 .box {
   background-color: white;
   padding: 20px;
   margin: 40px 10px 20px 20px;
   border-radius: 10px;
+  text-align: justify;
+}
+
+/*css for specific boxes*/
+.box1 {
+  grid-area: text1;
+}
+
+.box2 {
+  grid-area: video1;
+}
+h2 {
+  color: rgb(145, 145, 145);
+}
+.box3 {
+  grid-area: text3;
 }
